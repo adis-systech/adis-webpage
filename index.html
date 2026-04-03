@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adis</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">    
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   
+<!-- nav -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> -->
+  
+
+<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    
+    
+    <style>
+        /* Reset & Base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        button {
+            cursor: pointer;
+        }
+
+ 
+
+
+        /* Header */
+        header {
+            flex-direction: row;
+            width: 100%;
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+        .nav-links a {
+            color: #fff;
+            font-weight: 500;
+        }
+        .get-quote-btn {
+            background-color: #ff6600;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('ss.jpeg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-center;
+            padding-left: 50px;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        .hero button {
+            flex-direction: row;
+            background-color: #ff6600;
+            border: none;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Services Section */
+       
+
+ .services-cards {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: -50px auto 50px auto;
+            max-width: 1200px;
+            position: relative;
+            z-index: 10;
+        }
+       
+        .card {
+            background-color: #fff;
+            padding: 25px;
+            flex: 1;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover; /* makes image fill nicely without stretching */
+            margin-bottom: 15px; 
+        }
+
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Our Services */
+        .our-services {
+            text-align: center;
+            padding: 50px 20px 20px 20px;
+        }
+        .our-services h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .our-services p {
+            margin-bottom: 40px;
+            color: #666;
+        }
+        .service-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .service-item {
+            flex: 1;
+            min-width: 280px;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .service-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .service-item h4 {
+            margin: 15px;
+        }
+        .service-item p {
+            margin: 0 15px 15px 15px;
+            color: #555;
+        }
+        .view-projects-btn {
+            display: inline-block;
+            margin: 30px auto 0 auto;
+            background-color: #ff6600;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 5px;
+        }
+
+        /* Featured Projects */
+        .featured-projects {
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .featured-projects h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .projects-grid {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 120px;
+            margin: 0 auto;
+        }
+        .project-item {
+            flex: 1;
+            min-width: 280px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: left;
+        }
+        .project-item img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        .project-item h4 {
+            margin: 15px;
+        }
+
+        /* Footer */
+        footer {
+            width: 100%;
+            background-color: #1c1c1c;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .footer-grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .footer-grid div h5 {
+            margin-bottom: 1px;
+        }
+        .footer-grid div p, .footer-grid div a {
+            font-size: 0.9rem;
+            color: #aaa;
+            display: block;
+            margin-bottom: 2px;
+        }
+        .footer-socials a {
+            margin-right: 10px;
+            color: #aaa;
+            font-size: 1.2rem;
+        }
+
+        /* Responsive */
+        @media(max-width: 900px) {
+            .services-cards {
+                flex-direction: column;
+                margin: 0 20px 50px 20px;
+            }
+            .service-grid, .projects-grid {
+                flex-direction: column;
+            }
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+    <!-- Header -->
+    
+
+ <header>
+
+        <nav>
+           
+            <div class="logo"><img src="favicon.ico" alt="Adis"></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="certification.html"> certification</a>
+                <a href="contact.html">Contact</a>
+                    <!-- <a href="#">client</a> -->
+                
+            </div>
+            <a href="contact.html" class="get-quote-btn">Get a Quote</a>
+       </div>
+        </nav>
+    </header>
+    
+
+    <!-- Hero Section -->
+       
+    <section class="hero">
+        <p>
+            <h3>A-DOPT INTERNATIONAL SERVICES NIG LTD</h3>
+        <P>people,quality,integrity</P>
+         <a href="about.html"><button>Get Started</button></a>
+        </p>
+    </section>
+   
+    <!-- Services Cards -->
+    <section class="services-cards">
+        <div class="card">
+            <img src="african-american-worker-standing-uniform-wearing-safety-hat-factory.jpg.jpeg" alt="">
+            <h3>Civil construction services</h3>
+            <p>Expert oversight from planning to completion</p>
+        </div>
+        <div class="card">
+            <img src="medical-doctor-girl-working-with-microscope-young-female-scientist-doing-vaccine-research.jpg.jpeg" alt="">
+            <h3>Laboratory Services</h3>
+            <p>our state of art laboratory facilitiesare fully equipped to perform a wide variety of analyses</p>
+        </div>
+        <div class="card">
+            <img src="contact/construct1.jpg" alt="">
+            <p><h3>Mechanical Engineering</h3>
+            <h3> Maintenance & Fabrication Services</h3></p>
+            <p>comprehensive mechanical engineering solutions for optimal performance and reliability</p>
+        </div>
+    </section>
+
+    <!-- Other Services -->
+    <section class="our-services">
+        
+        <div class="service-grid">
+            <div class="service-item">
+                <img src="portrait-firefighter-standing-front-fire-engine.jpg.jpeg">
+                <h4>Electrical Instrumentation & Indusrail Automation Engineering</h4>
+                <p>Advanced electrical systems and industrial automation solutions</p>
+            </div>
+            <div class="service-item">
+                <img src="logistics.jpeg" alt="">
+                <h4>Logistics</h4>
+                <p>Efficient supply chain management and logistics solutions</p>
+            </div>
+            <div class="service-item">
+                <img src="pic4.jfif" alt="">
+                <h4>Environmental Management Services</h4>
+             <p>Comprehensive environmental management solutions</p>
+            </div>
+        </div>
+        <a href="services.html" class="view-projects-btn">View All Projects</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h5>About Us</h5>
+                
+               <a href="about.html"><p>Who We Are</p></a>
+               <a href="services.html"><p>Our Team</p></a> 
+            </div>
+            <div>
+                <h5>Services</h5>
+                <p>Environmental management services</p>
+                <p>laboratory services</p>
+                <p>civil engineering/construction services</p>
+                <p>electrical instrumentation </p>
+                <p> industrial automation engineering</p>
+                <p>mechanical engineering </p><p> maintainance/fabrication  services</p>
+                 <p>logistics</p>
+            </div>
+            <div>
+                <h5>Quick Links</h5>
+                <a href="services.html"><p>Projects</p></a>
+                <a href="contact.html"><p>Contact Us</p></a>
+            </div>
+            <div>
+                <h5>Contact Us</h5>
+                <p>Email: info@adislimited.com</p>
+                <p>Phone: 07032042223</p>
+                <p>0803373105</p>
+                <div class="footer-socials">
+                    <a href=" https://www.facebook.com/adislimited">Facebook</a>
+                     <a href="https://twitter.com/adislimited">Twitter</a>
+                    <a href="https://www.linkedin.com/company/adis-limited">LinkedIn</a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+   
+    
+
+</body>
+</html>
